@@ -35,6 +35,7 @@ namespace A_CBChoice
                 this.cbList.Items.Add(this.txtList.Text);
                 MessageBox.Show("아이템을 추가하였습니다.", "알림"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.txtList.Text = "";
             }
             else
             {
