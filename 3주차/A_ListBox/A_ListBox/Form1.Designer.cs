@@ -32,6 +32,7 @@
             this.txtList = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lblResult = new System.Windows.Forms.Label();
+            this.btnRemove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbView
@@ -74,11 +75,24 @@
             this.lblResult.TabIndex = 3;
             this.lblResult.Text = "결과:";
             // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(405, 120);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(75, 23);
+            this.btnRemove.TabIndex = 4;
+            this.btnRemove.Text = "삭제";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 346);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtList);
@@ -100,6 +114,7 @@
         private System.Windows.Forms.TextBox txtList;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.Button btnRemove;
     }
 }
 

@@ -56,6 +56,8 @@
             this.lvView.TabIndex = 0;
             this.lvView.UseCompatibleStateImageBehavior = false;
             this.lvView.View = System.Windows.Forms.View.Details;
+        
+            this.lvView.Click += new System.EventHandler(this.lvView_Click);
             this.lvView.SelectedIndexChanged += new System.EventHandler(this.lvView_SelectedIndexChanged);
             // 
             // chName

@@ -42,7 +42,36 @@ namespace A_ListBox
 
         private void lbView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.lblResult.Text = OrgStr + this.lbView.SelectedItem.ToString();
+            if (this.lbView.SelectedItems.Count != 0)//코드수정
+            {
+                this.lblResult.Text = OrgStr + this.lbView.SelectedItem.ToString();
+
+            }
+            else
+            {
+                this.lblResult.Text = OrgStr;
+            }
+            }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            
+            if(this.lbView.SelectedItems.Count!=0)//코드 수정
+            {
+                MessageBox.Show("선택한 "+this.lbView.SelectedItem.ToString()+" 아이템 삭제완료", "알림",
+                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.lbView.Items.Remove(lbView.SelectedItem);
+              
+            }
+            else
+            {
+                MessageBox.Show("아이템을 선택하세요", "알림",
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+
+            }
+
+
 
         }
     }

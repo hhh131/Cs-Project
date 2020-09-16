@@ -46,6 +46,24 @@ namespace A_ListView
             this.lvView.Items.Add(lvi);
         }
 
+        private void lvView_Click(object sender, EventArgs e)
+        {
+        
+            if (this.lvView.SelectedItems.Count != 0)
+            {
+                MessageBox.Show("이름 : " + this.lvView.SelectedItems[0].SubItems[0].Text
+                    + "\n나이 : " + this.lvView.SelectedItems[0].SubItems[1].Text
+                    + "\n직업 : " + this.lvView.SelectedItems[0].SubItems[2].Text, "알림"
+                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        
+
+
+        }
+
+   
+
         private bool TextCheck()
         {
             if (this.txtName.Text != "" && this.txtAge.Text != "" && this.txtWork.Text != "")
@@ -61,17 +79,10 @@ namespace A_ListView
 
         private void lvView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.lvView.SelectedItems.Count == 0)
+            if (this.lvView.SelectedItems.Count.Equals(0))
             {
                 MessageBox.Show("아이템을 선택하세요", "알림",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("이름:" + this.lvView.SelectedItems[0].SubItems[0].Text
-                    + "\n나이:" + this.lvView.SelectedItems[0].SubItems[1].Text
-                    + "\n직업" + this.lvView.SelectedItems[0].SubItems[2].Text, "알림"
-                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
+           MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
