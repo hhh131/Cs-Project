@@ -62,7 +62,14 @@ namespace A_ListView
 
         }
 
-   
+        private void lvView_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (this.lvView.SelectedItems.Count.Equals(0))
+            {
+                MessageBox.Show("아이템을 선택하세요", "알림",
+      MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        }
 
         private bool TextCheck()
         {
@@ -81,8 +88,8 @@ namespace A_ListView
         {
             if (this.lvView.SelectedItems.Count.Equals(0))
             {
-                MessageBox.Show("아이템을 선택하세요", "알림",
-           MessageBoxButtons.OK, MessageBoxIcon.Error);
+         /*       MessageBox.Show("아이템을 선택하세요", "알림",
+           MessageBoxButtons.OK, MessageBoxIcon.Error);*/
             }
         }
     }
