@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tlsMenu = new System.Windows.Forms.ToolStrip();
+            this.tsbtnFont = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnColor = new System.Windows.Forms.ToolStripButton();
             this.fontDlg = new System.Windows.Forms.FontDialog();
             this.colorDlg = new System.Windows.Forms.ColorDialog();
             this.rtbText = new System.Windows.Forms.RichTextBox();
-            this.tsbtnFont = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnColor = new System.Windows.Forms.ToolStripButton();
             this.tlsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,16 +48,6 @@
             this.tlsMenu.Size = new System.Drawing.Size(366, 25);
             this.tlsMenu.TabIndex = 0;
             this.tlsMenu.Text = "toolStrip1";
-            // 
-            // rtbText
-            // 
-            this.rtbText.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbText.Location = new System.Drawing.Point(0, 25);
-            this.rtbText.Name = "rtbText";
-            this.rtbText.Size = new System.Drawing.Size(366, 275);
-            this.rtbText.TabIndex = 1;
-            this.rtbText.Text = "";
-            this.rtbText.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // tsbtnFont
             // 
@@ -78,6 +68,16 @@
             this.tsbtnColor.Text = "tsbtnFont";
             this.tsbtnColor.Click += new System.EventHandler(this.tsbtnColor_Click);
             // 
+            // rtbText
+            // 
+            this.rtbText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbText.Location = new System.Drawing.Point(0, 25);
+            this.rtbText.Name = "rtbText";
+            this.rtbText.Size = new System.Drawing.Size(366, 275);
+            this.rtbText.TabIndex = 1;
+            this.rtbText.Text = "";
+            this.rtbText.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -86,7 +86,7 @@
             this.Controls.Add(this.rtbText);
             this.Controls.Add(this.tlsMenu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "폰트 꾸미기";
             this.tlsMenu.ResumeLayout(false);
             this.tlsMenu.PerformLayout();
             this.ResumeLayout(false);
