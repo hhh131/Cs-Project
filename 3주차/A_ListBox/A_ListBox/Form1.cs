@@ -60,6 +60,7 @@ namespace A_ListBox
             {
                 MessageBox.Show("선택한 "+this.lbView.SelectedItem.ToString()+" 아이템 삭제완료", "알림",
                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
                 this.lbView.Items.Remove(lbView.SelectedItem);
               
             }

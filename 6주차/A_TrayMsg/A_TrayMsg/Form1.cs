@@ -23,5 +23,10 @@ namespace A_TrayMsg
             frm2.MsgText = this.txtMsg.Text;
             frm2.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

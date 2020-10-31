@@ -72,7 +72,7 @@ namespace A_Progress
             else
             {
                 MessageBox.Show("멈춤상태에서는 리셋이 동작하지 않습니다.", "알림",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

@@ -16,6 +16,10 @@ namespace A_TrayMsg
         {
             int x = Screen.PrimaryScreen.WorkingArea.Width - this.Width - 20;
             int y = Screen.PrimaryScreen.WorkingArea.Height - this.Height;
+
+            DesktopLocation = new Point(x, y); //폼의 위치 설정
+            this.Size = new Size(170, 0); //폼의 크기 설정
+
             InitializeComponent();
         }
         private static System.Timers.Timer TimerEvent;
@@ -23,7 +27,8 @@ namespace A_TrayMsg
         {
             set { this.lblResult.Text = value; }
         }
-        private delegate void OnDelegateHeight(int Flag);
+
+        private delegate void OnDelegateHeight(int Falag);
         private OnDelegateHeight OnHeight = null;
 
         private void Form2_Load(object sender, EventArgs e)
